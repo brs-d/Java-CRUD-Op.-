@@ -2,10 +2,7 @@ package com.barisdeneme.contactbook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -86,7 +82,7 @@ public class KisiEkle extends AppCompatActivity {
                 myCalendar.set(Calendar.YEAR,year);
                 myCalendar.set(Calendar.MONTH,month);
                 myCalendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
-                updateLabel();
+                updateBirthday();
             }
         };
 
@@ -119,7 +115,7 @@ public class KisiEkle extends AppCompatActivity {
     }
 
     //seçilen tarih ilgili formatta alınıyor
-    private void updateLabel(){
+    private void updateBirthday(){
         String myFormat = "dd/MM/yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
