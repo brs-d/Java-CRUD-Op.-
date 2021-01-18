@@ -36,6 +36,7 @@ public class KisiListesi extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(KisiListesi.this,KisiEkle.class);
                 intent.putExtra("editMode",false);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

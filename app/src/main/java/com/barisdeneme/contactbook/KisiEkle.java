@@ -104,7 +104,9 @@ public class KisiEkle extends AppCompatActivity {
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(KisiEkle.this,KisiListesi.class));
+                Intent intent = new Intent(KisiEkle.this,KisiListesi.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
 
@@ -118,7 +120,7 @@ public class KisiEkle extends AppCompatActivity {
 
     //seçilen tarih ilgili formatta alınıyor
     private void updateLabel(){
-        String myFormat = "MM/dd/yyyy";
+        String myFormat = "dd/MM/yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
         personBirthdayText.setText(sdf.format(myCalendar.getTime()));
