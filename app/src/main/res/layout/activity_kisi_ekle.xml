@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".KisiEkle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:background="@drawable/header">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:clickable="true"
+            android:src="@drawable/rectangle"
+            android:foreground="@mipmap/backtolist_foreground"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Kişi Ekle"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="80dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/personNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="İsim"
+            android:inputType="textPersonName"
+            android:digits="abcçdefgğhiıjklmnoöprsştuüvyzABCÇDEFGĞHİIJKLMNOÖPRSŞTUÜVYZ "
+            android:maxLength="20"
+            android:textColor="#313131" />
+
+        <EditText
+            android:id="@+id/personSurnameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Soyisim"
+            android:digits="abcçdefgğhiıjklmnoöprsştuüvyzABCÇDEFGĞHİIJKLMNOÖPRSŞTUÜVYZ "
+            android:maxLength="20"
+            android:inputType="textPersonName"
+            android:textColor="#313131" />
+
+        <EditText
+            android:id="@+id/personBirthdayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Doğum Tarihi"
+            android:inputType="datetime"
+            android:focusable="false"
+            android:clickable="true"
+            android:textColor="#313131" />
+
+        <EditText
+            android:id="@+id/personEmailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Eposta"
+            android:maxLength="60"
+            android:inputType="textEmailAddress"
+            android:textColor="#313131" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="+90" />
+            <EditText
+                android:id="@+id/personPhoneText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Telefon Numarası"
+                android:inputType="number"
+                android:maxLength="13"
+                android:textColor="#313131" />
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/personNoteText"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Not"
+            android:maxLength="100"
+            android:inputType="textMultiLine"
+            android:textColor="#313131" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="300dp"
+            android:layout_height="65dp"
+            android:textAllCaps="false"
+            android:text="Kaydet / Güncelle"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonbackground" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

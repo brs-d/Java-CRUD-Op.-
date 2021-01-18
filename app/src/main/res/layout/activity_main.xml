@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F2F6"
+    tools:context=".KisiListesi">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@drawable/header">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="118dp"
+            android:layout_height="48dp"
+            android:text="Kişiler"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="130dp"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:clickable="true"
+            android:src="@drawable/rectangle"
+            android:foreground="@mipmap/addingperson_foreground"
+            android:layout_gravity="center"
+            android:layout_marginStart="80dp"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/searchBox"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:src="@drawable/searchbackground"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="50dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row" />
+
+
+
+</LinearLayout>
